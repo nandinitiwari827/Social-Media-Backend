@@ -9,6 +9,7 @@ app.set("trust proxy", 1)
 let allowedOrigins = [
   "http://localhost:5175",
   "http://localhost:5174",
+  "https://social-media-app-one-lime.vercel.app"
 ]
 
 app.use(
