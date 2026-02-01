@@ -140,8 +140,8 @@ let loginUser=asyncHandler(async(req, res)=>{
 
    let options={
     httpOnly: true,
-    // secure: true
-    secure: process.env.NODE_ENV === 'production',
+  secure: true,
+  sameSite: "none",
    }
 
    return res.status(200).cookie("accessToken", accessToken, options)
@@ -189,7 +189,8 @@ let logoutUser = asyncHandler(async (req, res) => {
 
     let options={
         httpOnly: true,
-        secure: true
+  secure: true,
+  sameSite: "none",
     }
 
     return res.status(200)
