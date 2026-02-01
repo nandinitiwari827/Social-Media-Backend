@@ -1,8 +1,10 @@
 import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
+\
+let app = express()
 
-let app=express()
+app.set("trust proxy", 1)
 
 let allowedOrigins = [
   "http://localhost:5175",
